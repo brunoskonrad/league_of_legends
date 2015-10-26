@@ -1,0 +1,2 @@
+defmodule LeagueOfLegends do
+end
