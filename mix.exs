@@ -12,7 +12,10 @@ defmodule LeagueOfLegends.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :httpoison]]
+    [
+      mod: {LeagueOfLegends, []},
+      applications: [:logger, :httpoison, :exjsx]
+    ]
   end
 
   # Dependencies can be Hex packages:
@@ -27,7 +30,7 @@ defmodule LeagueOfLegends.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.7.2"},
-      {:poison, "~> 1.5"}
+      {:exjsx, "~> 3.1.0", app: false}
     ]
   end
 end
